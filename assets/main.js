@@ -21,13 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const langLinks = document.querySelectorAll('[data-lang]');
-  if (langLinks.length > 0) {
-    const path = window.location.pathname.split('/').filter(Boolean);
-    const page = path[path.length - 1] || 'index.html';
-    langLinks.forEach((link) => {
-      const lang = link.getAttribute('data-lang');
-      if (lang) link.setAttribute('href', `/${lang}/${page}`);
-    });
-  }
+
 });

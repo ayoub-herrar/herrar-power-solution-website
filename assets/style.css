@@ -45,6 +45,19 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: space-between;
   min-height: 72px;
+  gap: 1.5rem;
+}
+
+.header-left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.header-right {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
@@ -56,7 +69,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.02em;
 }
 
-.brand-mark {
+.brand-icon {
   width: 2.45rem;
   height: 2.1rem;
   border-radius: 0.45rem;
@@ -70,6 +83,10 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.04em;
   line-height: 1;
   flex-shrink: 0;
+}
+
+.brand-text {
+  white-space: nowrap;
 }
 
 .nav-wrap {
@@ -125,6 +142,7 @@ a { color: inherit; text-decoration: none; }
   background: transparent;
   border-radius: 0.5rem;
   padding: 0.3rem 0.5rem;
+  flex-shrink: 0;
 }
 
 .hero {
@@ -294,12 +312,19 @@ textarea { min-height: 140px; resize: vertical; }
 
   .menu-toggle { display: inline-block; }
 
+  .header-right {
+    position: relative;
+  }
+
   .nav-wrap {
     position: absolute;
     top: 72px;
-    inset-inline: 0;
+    right: 0;
+    width: min(100vw - 2rem, 360px);
     background: rgba(15, 23, 32, 0.98);
     border-bottom: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    border-radius: 0 0 0.75rem 0.75rem;
     padding: 1rem;
     display: none;
     flex-direction: column;

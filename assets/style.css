@@ -121,7 +121,8 @@ a { color: inherit; text-decoration: none; }
   padding: 0.2rem;
 }
 
-.lang-switch a {
+.lang-switch a,
+.lang-switch span {
   font-size: 0.85rem;
   color: var(--muted);
   border-radius: 999px;
@@ -129,10 +130,15 @@ a { color: inherit; text-decoration: none; }
   transition: all 0.2s;
 }
 
-.lang-switch a.active,
+.lang-switch .active,
 .lang-switch a:hover {
   background: var(--primary);
   color: #fff;
+}
+
+.lang-switch .active {
+  cursor: default;
+  pointer-events: none;
 }
 
 .menu-toggle {

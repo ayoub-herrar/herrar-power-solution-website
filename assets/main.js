@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = form.querySelector('[name="email"]')?.value?.trim() || '';
       const message = form.querySelector('[name="message"]')?.value?.trim() || '';
       const body = encodeURIComponent(`${message}\n\n${name} (${email})`);
-      window.location.href = `mailto:info@herrarpowersolution.com?subject=Website%20Contact&body=${body}`;
+      window.location.href = `mailto:contact@herrarpowersolution.com?subject=Website%20Contact&body=${body}`;
     });
   }
 

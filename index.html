@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HERRAR POWER SOLUTION</title>
+  <script>
+    (function () {
+      const lang = (navigator.language || '').toLowerCase();
+      let dest = './en/';
+
+      if (lang.startsWith('de')) {
+        dest = './de/';
+      } else if (lang.startsWith('fr')) {
+        dest = './fr/';
+      } else if (lang.startsWith('en')) {
+        dest = './en/';
+      }
+
+      window.location.replace(dest);
+    })();
+  </script>
+</head>
+<body>
+  <noscript>
+    <p>
+      JavaScript is required for automatic language detection.
+      Continue to the English site: <a href="./en/">/en/</a>
+    </p>
+  </noscript>
+</body>
+</html>

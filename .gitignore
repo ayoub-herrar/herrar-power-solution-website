@@ -1,0 +1,5 @@
+# Prevent accidental commit of new binary media assets
+*.jpg
+*.png
+*.webp
+*.svg
